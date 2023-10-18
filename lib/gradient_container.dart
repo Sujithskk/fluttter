@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:frist_app/styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
   // initialization work
   // add some comment
+  //var StartAlignment = Alignment.topLeft;
+  //var endAlignment = Alignment.bottomRight;
 
   @override
   Widget build(context) {
@@ -19,15 +22,7 @@ class GradientContainer extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
-      child: const Center(
-        child: Text(
-          'Hello sujith sssssssss!',
-          style: TextStyle(
-            color: Colors.pink,
-            fontSize: 20,
-          ),
-        ),
-      ),
+      child: const Center(child: StyledText()),
     );
   }
 }
