@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:frist_app/styled_text.dart';
 
-var startAlignment = Alignment.topLeft;
-var endAlignment = Alignment.bottomRight;
+const startAlignment = Alignment.topLeft;
+const endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.color1, this.color2, {super.key});
+
+  const GradientContainer.purble({super.key})
+      : color1 = Colors.redAccent,
+        color2 = Colors.green;
+
+  final Color color1;
+  final Color color2;
+
   // initialization work
   // add some comment
   //var StartAlignment = Alignment.topLeft;
@@ -13,20 +20,48 @@ class GradientContainer extends StatelessWidget {
 
   @override
   Widget build(context) {
-    startAlignment = Alignment.bottomLeft;
+    //startAlignment = Alignment.bottomLeft;
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: const [
-            Color.fromRGBO(255, 82, 82, 1),
-            Color.fromRGBO(180, 255, 82, 1),
-            Color.fromRGBO(82, 229, 255, 1),
-          ],
+          colors: [color1, color2],
           begin: startAlignment,
           end: endAlignment,
         ),
       ),
-      child: const Center(child: StyledText()),
+      child: Center(
+        child: Image.asset('assets/images/dice-2.png'),
+      ),
     );
   }
 }
+
+
+
+// class GradientContainer extends StatelessWidget {
+//   const GradientContainer({super.key,required this.colors });
+
+//   final List <Color> colors;
+
+//   // initialization work
+//   // add some comment
+//   //var StartAlignment = Alignment.topLeft;
+//   //var endAlignment = Alignment.bottomRight;
+
+//   @override
+//   Widget build(context) {
+//     //startAlignment = Alignment.bottomLeft;
+//     return Container(
+//       decoration:  BoxDecoration(
+//         gradient: LinearGradient(
+//           colors: colors,
+//           begin: startAlignment,
+//           end: endAlignment,
+//         ),
+//       ),
+//       child: const Center(
+//         child: StyledText('Hello sujithkumar!'),
+//       ),
+//     );
+//   }
+// }
