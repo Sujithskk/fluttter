@@ -22,7 +22,19 @@ class GradientContainer extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
+<<<<<<< HEAD
       child: const Center(child: StyledText()),
+=======
+      child: const Center(
+        child: Text(
+          'Hello sujith ertytrertyuiuytrertyu!',
+          style: TextStyle(
+            color: Colors.pink,
+            fontSize: 20,
+          ),
+        ),
+      ),
+>>>>>>> 0d708c2fe3c7eb1c2e2ec875d0185a7be10bf355
     );
   }
 }
